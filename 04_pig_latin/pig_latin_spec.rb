@@ -67,6 +67,13 @@ describe "#translate" do
 
   # Test-driving bonus:
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
+  it "retains capitalization" do
+    s = translate("He tapped Miss fat bitch Amanda")
+    expect(s).to eq("Ehay appedtay Issmay atfay itchbay Amandaay")
+  end
   # * retain the punctuation from the original phrase
-
+  it "retains punctuation" do
+    s = translate("Go, you fuckin bitch!")
+    expect(s).to eq("Ogay, ouyay uckinfay itchbay!")
+  end
 end
